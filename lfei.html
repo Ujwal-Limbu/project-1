@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 4 Responsive</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #0d1117;
+    color: #fff;
+  }
+
+  .section4 {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section4-container-boxescontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  .section4-flexbox {
+    background: #161b22;
+    border-radius: 20px;
+    flex: 1 1 320px;
+    min-width: 280px;
+    max-width: 340px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .section4-flexbox:hover {
+    transform: translateY(-5px);
+    background: #1e2630;
+  }
+
+  /* Box 1 layout */
+  .section4-box1-div1 {
+    text-align: right;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .section4-box1-div1 a {
+    color: #1da077;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .section4-box1-div2 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .box-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #box-img1 { background-image: url('https://via.placeholder.com/60x60/1da077/ffffff'); }
+  #box-img2 { background-image: url('https://via.placeholder.com/60x60/ff9800/ffffff'); }
+  #box-img3 { background-image: url('https://via.placeholder.com/60x60/03a9f4/ffffff'); }
+  #box-img4 { background-image: url('https://via.placeholder.com/60x60/e91e63/ffffff'); }
+
+  .section4-box1-div3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 15px;
+  }
+
+  .twothree h1 {
+    font-size: 40px;
+    color: #1da077;
+  }
+
+  .all-Courses strong {
+    font-size: 18px;
+    display: block;
+  }
+
+  .all-Courses p {
+    font-size: 14px;
+    color: #bbb;
+  }
+
+  /* Box 2 & 3 layout */
+  .boxes-container-box2-rotatingdiv,
+  .boxes-container-box3-rotatingdiv {
+    text-align: center;
+  }
+
+  .boxes-container-box2-div2,
+  .boxes-container-box3-div2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #1da077;
+  }
+
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 900px) {
+    .section4-container-boxescontainer {
+      gap: 15px;
+    }
+
+    .section4-flexbox {
+      max-width: 100%;
+    }
+
+    .twothree h1 {
+      font-size: 35px;
+    }
+
+    .boxes-container-box2-div2 h2,
+    .boxes-container-box3-div2 h2 {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .section4 {
+      padding: 40px 10px;
+    }
+
+    .section4-box1-div3 {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .section4-box1-div1 {
+      text-align: center;
+    }
+
+    .box-img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .twothree h1 {
+      font-size: 30px;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<section class="section4">
+  <div class="section4-container-heading"></div>
+
+  <div class="section4-container-boxescontainer">
+
+    <!-- Box 1 -->
+    <div id="boxes-container-box1" class="section4-flexbox">
+      <div class="section4-box1-div1">
+        <a href="#">View all Courses <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="section4-box1-div2">
+        <div class="box-img" id="box-img1"></div>
+        <div class="box-img" id="box-img2"></div>
+        <div class="box-img" id="box-img3"></div>
+        <div class="box-img" id="box-img4"></div>
+      </div>
+
+      <div class="section4-box1-div3">
+        <div class="twothree"><h1>23</h1><sup>+</sup></div>
+        <div class="all-Courses">
+          <strong>All Courses</strong>
+          <p>Courses you're powering through right now.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Box 2 -->
+    <div id="boxes-container-box2" class="section4-flexbox">
+      <div class="boxes-container-box2-rotatingdiv">
+        <h2>Upcoming Courses</h2>
+        <p>Exciting new courses waiting to boost your skills.</p>
+      </div>
+      <div class="boxes-container-box2-div2">
+        <h2>05</h2>
+      </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div id="boxes-container-box3" class="section4-flexbox">
+      <div class="boxes-container-box3-rotatingdiv">
+        <h2>Ongoing Courses</h2>
+        <p>Currently happening — don’t miss out on the action!</p>
+      </div>
+      <div class="boxes-container-box3-div2">
+        <h2>10</h2>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
